@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+@SuppressWarnings("unused")
 @Controller
 public class TrangChuController {
 	@RequestMapping(value = {"/","trang-chu","trang-chu/"},method = RequestMethod.GET )
