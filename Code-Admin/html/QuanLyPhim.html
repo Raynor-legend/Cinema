@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Phim</title>
+    <link rel="stylesheet" type="text/css" href="../css/cssAdmin.css">
+	<script src="./js/jsAdmin.js" type="text/javascript" charset="utf-8"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+    <div id="Header">
+        <div id="Menu">
+            <a href="Home.html"><p id="LinkMenu">Home</p></a>
+            <a href="QuanLyPhim.html"><p id="LinkMenu">Quản Lý Phim</p></a>
+            <a href="QuanLyLichChieu.html"><p id="LinkMenu">Quản Lý Lịch Chiếu</p></a>
+            <a href="QuanLyDatVe.html"><p id="LinkMenu">Quản Lý Đặt Vé</p></a>
+            <a href="QuanLyTaiKhoan.html"><p id="LinkMenu">Quản Lý Tài Khoản</p></a>
+        </div>
+    </div>
+    <div id="QuanLy">
+        <div id="divTieuDeQuanLy">
+            <p id="TieuDeQuanLy">Quản Lý Phim</p>
+        </div>
+        <div id="InputQuanLy">
+            <table border="0" id="TableInputQuanLy">
+                <tr>
+                    <td style="width: 40%;"><p id="TextInputQuanLy">Mã phim:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add mã"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Tên phim:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add phim"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Thời lượng:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add thời lượng"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Thể loại:</p></td>
+                    <td><select name="TheLoaiPhim" id="ThongTinSelectQuanLy">
+                        <option value="Hành động">Hành động</option>
+                        <option value="Hoạt hình">Hoạt hình</option>
+                        <option value="Khoa học viễn tưởng">Khoa học viễn tưởng</option>
+                        <option value="Hài">Hài</option>
+                        <option value="Tâm lý">Tâm lý</option>
+                        <option value="Tội phạm">Tội phạm</option>
+                        <option value="Khoa học tự nhiên">Khoa học tự nhiên</option>
+                        <option value="Lãng mạn">Lãng mạn</option>
+                        <option value="Lịch sử">Lịch sử</option>
+                        <option value="Kinh điển">Kinh điển</option>
+                        <option value="Hollywood">Hollywood</option>
+                        <option value="Phiêu lưu">Phiêu lưu</option>
+                      </select></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Diễn viên:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add diễn viên"></td>
+                </tr>
+            </table>
+            <table border="0" id="TableInputQuanLy">
+                <tr>
+                    <td style="width: 40%;"><p id="TextInputQuanLy">Ngày khởi chiếu:</p></td>
+                    <td><input type="date" id="ThongTinInputQuanLy"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Ngày kết thúc:</p></td>
+                    <td><input type="date" id="ThongTinInputQuanLy"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Nhà sản xuất:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add nhà sản xuất"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Đạo diễn:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add đạo diễn"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Năm sản xuất:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add năm sản xuất"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="ChucNangQuanLy">
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsThem()">Thêm</button>
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsXoa()">Xóa</button>
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsSua()">Sửa</button>
+        </div>
+        <div>
+            <input type="text" id="TimKiemTableDanhSach" placeholder="Search">
+        </div>
+        <div id="divTableDanhSach">
+            <table border="1" id="TableDanhSach">
+                <tr id="TieuDeTableDanhSach">
+                    <td style="height: 50px;">STT</td>
+                    <td>Mã phim</td>
+                    <td>Tên phim</td>
+                    <td>Thời lượng</td>
+                    <td>Ngày khởi chiếu</td>
+                    <td>Ngày kết thúc</td>
+                    <td>Nhà sản xuất</td>
+                    <td>Đạo diễn</td>
+                    <td>Diễn viên</td>
+                    <td>Năm sản xuất</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

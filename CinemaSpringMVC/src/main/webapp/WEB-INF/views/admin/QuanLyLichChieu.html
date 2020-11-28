@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Lịch Chiếu</title>
+    <link rel="stylesheet" type="text/css" href="../css/cssAdmin.css">
+	<script src="./js/jsAdmin.js" type="text/javascript" charset="utf-8"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+    <div id="Header">
+        <div id="Menu">
+            <a href="Home.html"><p id="LinkMenu">Home</p></a>
+            <a href="QuanLyPhim.html"><p id="LinkMenu">Quản Lý Phim</p></a>
+            <a href="QuanLyLichChieu.html"><p id="LinkMenu">Quản Lý Lịch Chiếu</p></a>
+            <a href="QuanLyDatVe.html"><p id="LinkMenu">Quản Lý Đặt Vé</p></a>
+            <a href="QuanLyTaiKhoan.html"><p id="LinkMenu">Quản Lý Tài Khoản</p></a>
+        </div>
+    </div>
+    <div id="QuanLy">
+        <div id="divTieuDeQuanLy">
+            <p id="TieuDeQuanLy">Quản Lý Lịch Chiếu</p>
+        </div>
+        <div id="InputQuanLy">
+            <table border="0" id="TableInputQuanLy">
+                <tr>
+                    <td style="width: 40%;"><p id="TextInputQuanLy">Chọn rạp:</p></td>
+                    <td><select name="ChonRap" id="ThongTinSelectQuanLy">
+                        <option value="An Dương Vương">An Dương Vương</option>
+                        <option value="Nguyễn Trãi">Nguyễn Trãi</option>
+                        <option value="Nguyễn Văn Cừ">Nguyễn Văn Cừ</option>
+                        <option value="Trần Quốc Toản">Trần Quốc Toản</option>
+                      </select></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Phòng chiếu:</p></td>
+                    <td><select name="PhongChieu" id="ThongTinSelectQuanLy">
+                        <option value="PC01">PC01</option>
+                        <option value="PC02">PC02</option>
+                        <option value="PC03">PC03</option>
+                        <option value="PC04">PC04</option>
+                      </select></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Mã phim:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add mã phim"></td>
+                </tr>
+            </table>
+            <table border="0" id="TableInputQuanLy">
+                <tr>
+                    <td style="width: 40%;"><p id="TextInputQuanLy">Ngày chiếu:</p></td>
+                    <td><input type="date" id="ThongTinInputQuanLy"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Giờ chiếu:</p></td>
+                    <td><input type="time" id="ThongTinInputQuanLy"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Thời lượng:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add thời lượng"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="ChucNangQuanLy">
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsThem()">Thêm</button>
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsXoa()">Xóa</button>
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsSua()">Sửa</button>
+        </div>
+        <div>
+            <input type="text" id="TimKiemTableDanhSach" placeholder="Search">
+        </div>
+        <div id="divTableDanhSach">
+            <table border="1" id="TableDanhSach">
+                <tr id="TieuDeTableDanhSach">
+                    <td style="height: 50px;">STT</td>
+                    <td>Mã lịch chiếu</td>
+                    <td>Mã phim</td>
+                    <td>Thời gian chiếu</td>
+                    <td>Thời lượng</td>
+                    <td>Phòng chiếu</td>
+                    <td>Rạp chiếu</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

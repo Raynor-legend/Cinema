@@ -5,7 +5,7 @@
    xsi:schemaLocation = "http://java.sun.com/xml/ns/j2ee 
    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-   <display-name>CinemaSpringMVC</display-name>
+   <display-name>CinemaSpringMVC Application</display-name>
 
    <servlet>
       <servlet-name>CinemaDispatcher</servlet-name>
@@ -39,4 +39,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 	
+   
+   
+   
 </web-app>

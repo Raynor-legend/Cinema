@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Đặt Vé</title>
+    <link rel="stylesheet" type="text/css" href="../css/cssAdmin.css">
+	<script src="../js/jsAdmin.js" type="text/javascript" charset="utf-8"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+    <div id="Header">
+        <div id="Menu">
+            <a href="Home.html"><p id="LinkMenu">Home</p></a>
+            <a href="QuanLyPhim.html"><p id="LinkMenu">Quản Lý Phim</p></a>
+            <a href="QuanLyLichChieu.html"><p id="LinkMenu">Quản Lý Lịch Chiếu</p></a>
+            <a href="QuanLyDatVe.html"><p id="LinkMenu">Quản Lý Đặt Vé</p></a>
+            <a href="QuanLyTaiKhoan.html"><p id="LinkMenu">Quản Lý Tài Khoản</p></a>
+        </div>
+    </div>
+    <div id="QuanLy">
+        <div id="divTieuDeQuanLy">
+            <p id="TieuDeQuanLy">Danh Sách Vé</p>
+            <hr id="hrQuanLyDatVe"/>
+        </div>
+        <div id="ChucNangQuanLy">
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsVeDaDat()">Vé đã đặt</button>
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsVeConTrong()">Vé còn trống</button>
+            <button  id ="ButtonChucNangQuanLy" type="button" onclick="JsVeBiHuy()">Vé bị hủy</button>
+        </div>
+    </div>
+    <div id="NenBlack"></div>
+    <div id="VeDaDat">
+        <div id="divTieuDeQuanLy">
+            <p id="TieuDeQuanLy">Danh sách vé đặt</p>
+        </div>
+        <button  id ="ButtonThoat" type="button" onclick="JsThoatXemVe()">X</button>
+        <div id="TimKiemVe">
+            <select name="SelectTimKiemVe" id="SelectTimKiemVe">
+                <option style="display: none;">Chọn miền tìm kiếm</option>
+                <option value="Tên người đặt vé">Tên người đặt vé</option>
+                <option value="Email">Email</option>
+                <option value="Số điện thoại">Số điện thoại</option>
+                <option value="Ngày và giờ đặt">Ngày và giờ đặt</option>
+                <option value="Phòng chiếu">Phòng chiếu</option>
+                <option value="Thời gian chiếu">Thời gian chiếu</option>
+                <option value="Rạp">Rạp</option>
+            </select>
+            <input type="text" id="InputTimKiemVe" placeholder="Search">
+            <button  id ="ButtonTimKiemVe" type="button" onclick="JsTimKiemVeDat()">Tìm Kiếm</button>
+        </div>
+        <div id="divTableVe">
+            <table border="1" id="TableVe">
+                <tr id="TieuDeTableDanhSach">
+                    <td style="height: 50px;">STT</td>
+                    <td>Tên người đặt vé</td>
+                    <td>Email</td>
+                    <td>SĐT</td>
+                    <td>Ngày và giờ đặt</td>
+                    <td>Đồ ăn kèm</td>
+                    <td>Phòng chiếu</td>
+                    <td>Thời gian chiếu</td>
+                    <td>Rạp</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="VeConTrong">
+        <div id="divTieuDeQuanLy">
+            <p id="TieuDeQuanLy">Danh sách vé trống</p>
+        </div>
+        <button  id ="ButtonThoat" type="button" onclick="JsThoatXemVe()">X</button>
+        <div id="TimKiemVe">
+            <select name="SelectTimKiemVe" id="SelectTimKiemVe">
+                <option style="display: none;">Chọn miền tìm kiếm</option>
+                <option value="Tên người đặt vé">Tên người đặt vé</option>
+                <option value="Email">Email</option>
+                <option value="Số điện thoại">Số điện thoại</option>
+                <option value="Ngày và giờ đặt">Ngày và giờ đặt</option>
+                <option value="Phòng chiếu">Phòng chiếu</option>
+                <option value="Thời gian chiếu">Thời gian chiếu</option>
+                <option value="Rạp">Rạp</option>
+            </select>
+            <input type="text" id="InputTimKiemVe" placeholder="Search">
+            <button  id ="ButtonTimKiemVe" type="button" onclick="JsTimKiemVeDat()">Tìm Kiếm</button>
+        </div>
+        <div id="divTableVe">
+            <table border="1" id="TableVe">
+                <tr id="TieuDeTableDanhSach">
+                    <td style="height: 50px;">STT</td>
+                    <td>Tên người đặt vé</td>
+                    <td>Email</td>
+                    <td>SĐT</td>
+                    <td>Ngày và giờ đặt</td>
+                    <td>Đồ ăn kèm</td>
+                    <td>Phòng chiếu</td>
+                    <td>Thời gian chiếu</td>
+                    <td>Rạp</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="VeBiHuy">
+        <div id="divTieuDeQuanLy">
+            <p id="TieuDeQuanLy">Danh sách vé bị hủy</p>
+        </div>
+        <button  id ="ButtonThoat" type="button" onclick="JsThoatXemVe()">X</button>
+        <div id="TimKiemVe">
+            <select name="SelectTimKiemVe" id="SelectTimKiemVe">
+                <option style="display: none;">Chọn miền tìm kiếm</option>
+                <option value="Tên người đặt vé">Tên người đặt vé</option>
+                <option value="Email">Email</option>
+                <option value="Số điện thoại">Số điện thoại</option>
+                <option value="Ngày và giờ đặt">Ngày và giờ đặt</option>
+                <option value="Phòng chiếu">Phòng chiếu</option>
+                <option value="Thời gian chiếu">Thời gian chiếu</option>
+                <option value="Rạp">Rạp</option>
+            </select>
+            <input type="text" id="InputTimKiemVe" placeholder="Search">
+            <button  id ="ButtonTimKiemVe" type="button" onclick="JsTimKiemVeDat()">Tìm Kiếm</button>
+        </div>
+        <div id="divTableVe">
+            <table border="1" id="TableVe">
+                <tr id="TieuDeTableDanhSach">
+                    <td style="height: 50px;">STT</td>
+                    <td>Tên người đặt vé</td>
+                    <td>Email</td>
+                    <td>SĐT</td>
+                    <td>Ngày và giờ đặt</td>
+                    <td>Đồ ăn kèm</td>
+                    <td>Phòng chiếu</td>
+                    <td>Thời gian chiếu</td>
+                    <td>Rạp</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
