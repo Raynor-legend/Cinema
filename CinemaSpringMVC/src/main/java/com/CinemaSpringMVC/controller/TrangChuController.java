@@ -18,7 +18,14 @@ public class TrangChuController {
 	@RequestMapping(value = {"quan-tri","quan-tri/"},method = RequestMethod.GET )
 	public String TrangChuAdmin() {
 		
-		return "admin/html/Home";
+		return "admin/Home";
+		
+		
+	}
+	@RequestMapping(value = {"login","login/"},method = RequestMethod.GET )
+	public String DangNhapAdmin() {
+		
+		return "admin/DangNhapAdmin";
 		
 		
 	}
