@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Tài Khoản</title>
+    <link rel="stylesheet" type="text/css" href="../css/cssAdmin.css">
+	<script src="./js/jsAdmin.js" type="text/javascript" charset="utf-8"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+    <div id="Header">
+        <div id="Menu">
+            <a href="Home.html"><p id="LinkMenu">Home</p></a>
+            <a href="QuanLyPhim.html"><p id="LinkMenu">Quản Lý Phim</p></a>
+            <a href="QuanLyLichChieu.html"><p id="LinkMenu">Quản Lý Lịch Chiếu</p></a>
+            <a href="QuanLyDatVe.html"><p id="LinkMenu">Quản Lý Đặt Vé</p></a>
+            <a href="QuanLyTaiKhoan.html"><p id="LinkMenu">Quản Lý Tài Khoản</p></a>
+        </div>
+    </div>
+    <div id="QuanLy">
+        <div id="divTieuDeQuanLy">
+            <p id="TieuDeQuanLy">Quản Lý Tài Khoản</p>
+        </div>
+        <div id="InputQuanLy">
+            <table border="0" id="TableInputQuanLy">
+                <tr>
+                    <td style="width: 40%;"><p id="TextInputQuanLy">Họ tên:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add họ tên"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Ngày sinh:</p></td>
+                    <td><input type="date" id="ThongTinInputQuanLy"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Số điện thoại:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Add số điện thoại"></td>   
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Địa chỉ:</p></td>
+                    <td><input type="text" id="ThongTinInputQuanLy" placeholder="Số nhà/ Đường/ Phường/ Quận/ Thành phố"></td>   
+                </tr>
+            </table>
+            <table border="0" id="TableInputQuanLy">
+                <tr>
+                    <td style="width: 40%;"><p id="TextInputQuanLy">Email:</p></td>
+                    <td><input type="email" name="email" id="ThongTinInputQuanLy" placeholder="Add email"></td>   
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Password:</p></td>
+                    <td><input type="password" id="ThongTinInputQuanLy" placeholder="Add password"></td>
+                </tr>
+                <tr>
+                    <td><p id="TextInputQuanLy">Nhập lại pass:</p></td>
+                    <td><input type="password" id="ThongTinInputQuanLy" placeholder="Add password"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="ChucNangQuanLyTaiKhoan">
+            <button  id ="ButtonChucNangQuanLyTaiKhoan" type="button" onclick="JsThem()">Thêm</button>
+            <button  id ="ButtonChucNangQuanLyTaiKhoan" type="button" onclick="JsXoa()">Xóa</button>
+            <button  id ="ButtonChucNangQuanLyTaiKhoan" type="button" onclick="JsSua()">Sửa</button>
+            <button  id ="ButtonChucNangQuanLyTaiKhoan" type="button" onclick="JsSua()">Cấm</button>
+        </div>
+        <div>
+            <input type="text" id="TimKiemTableDanhSach" placeholder="Search">
+        </div>
+        <div id="divTableDanhSach">
+            <table border="1" id="TableDanhSach">
+                <tr id="TieuDeTableDanhSach">
+                    <td style="height: 50px;">STT</td>
+                    <td>Họ tên</td>
+                    <td>Ngày sinh</td>
+                    <td>Số điện thoại</td>
+                    <td>Địa chỉ</td>
+                    <td>Email</td>
+                    <td>Mật khẩu</td>
+                    <td>Trạng thái</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

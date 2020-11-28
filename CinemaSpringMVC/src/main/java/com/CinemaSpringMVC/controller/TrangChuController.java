@@ -15,5 +15,12 @@ public class TrangChuController {
 		
 		
 	}
+	@RequestMapping(value = {"quan-tri","quan-tri/"},method = RequestMethod.GET )
+	public String TrangChuAdmin() {
+		
+		return "admin/html/Home";
+		
+		
+	}
 
 }

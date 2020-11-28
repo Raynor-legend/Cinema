@@ -518,6 +518,7 @@ a:focus {
 <body>
 	<%@include file="/WEB-INF/views/layouts/user/header.jsp"%>
 	<decorator:body />
+	
 	<%@include file="/WEB-INF/views/layouts/user/footer.jsp"%>
 </body>
 </html>
